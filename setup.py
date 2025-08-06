@@ -24,7 +24,7 @@ def get_version():
     """
     Reads __version__ from src/__init__.py without importing the package.
     """
-    version_file = os.path.join("src", "mlproject", "__init__.py")
+    version_file = os.path.join("src", "__init__.py")
     with open(version_file, "r") as f:
         content = f.read()
     match = re.search(r"^__version__\s*=\s*['\"]([^'\"]+)['\"]", content, re.MULTILINE)
