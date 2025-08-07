@@ -13,6 +13,7 @@ keras
 torch
 torchvision
 transformers
+dill
 nltk
 spacy
 gensim
@@ -27,5 +28,5 @@ black
 flake8
 mypy
 pylint
--e .
+#-e .
 
