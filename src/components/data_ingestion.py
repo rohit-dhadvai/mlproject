@@ -23,13 +23,14 @@ class DataIngestion:
         logging.info("Data Ingestion method starts")
         try:
             df = pd.read_csv("notebook/data/stud.csv")
+            logging.info("Dataset read as pandas DataFrame: edit")
+
+            logging.info("Dataset read as pandas DataFrame : line edit")
             logging.info("Dataset read as pandas DataFrame")
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True)
 
             df.to_csv(self.ingestion_config.raw_data_path, index=False, header=True)
-
-            logging.info("Train test split initiated")   
             
             train_set, test_set = train_test_split(df, test_size=0.2, random_state=42, shuffle=True)
             train_set.to_csv(self.ingestion_config.train_data_path, index=False, header=True)
