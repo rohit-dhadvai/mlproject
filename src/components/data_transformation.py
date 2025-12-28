@@ -50,6 +50,8 @@ class DataTransformation:
             logging.info(f"Catagorical features: {categorical_features}")
             logging.info(f"Numerical features: {numerical_features}")
 
+            logging.info("Numerical and categorical preprocessing pipelines created")
+
             # Create a ColumnTransformer to apply the pipelines to the respective features
             preprocessor = ColumnTransformer(
                 transformers=[
